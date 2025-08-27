@@ -10,15 +10,18 @@
   <header class="cabecalho">
     <div class="conteiner navegacao">
       <a class="logomarca" href="index.html"><b>Marco</b>Ricardo</a>
+
       <ul class="menu-links" id="menu-links">
         <li><a href="index.html">Sobre mim</a></li>
         <li><a href="formacao.html" aria-current="page">Formação</a></li>
         <li><a href="portfolio.html">Portfólio</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
+
       <button class="botao-menu" id="botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
         <span class="barra"></span><span class="barra"></span><span class="barra"></span>
       </button>
+
       <button id="botao-tema" class="botao-tema" aria-label="Alternar tema" title="Alternar tema">🌙</button>
     </div>
   </header>
@@ -28,35 +31,54 @@
       <h1>Formação & Competências</h1>
 
       <div class="grade-formacao">
+        <!-- Graduação -->
         <article class="cartao">
           <h3>Graduação</h3>
           <p><strong>Engenharia de Software</strong> — 2025 a 2029</p>
         </article>
 
+        <!-- Idiomas -->
         <article class="cartao">
           <h3>Idiomas</h3>
-          <p>Inglês — <strong>B1 (quase B2)</strong></p>
+          <div class="linhas-etiquetas">
+            <span class="etiqueta">Inglês — B1 (quase B2)</span>
+          </div>
         </article>
 
+        <!-- Cursos -->
         <article class="cartao">
           <h3>Cursos & Certificações</h3>
-          <p><em>Sem cursos certificados no momento.</em></p>
+          <p class="texto-suave"><em>Sem cursos certificados no momento.</em></p>
         </article>
 
+        <!-- Ferramentas -->
         <article class="cartao">
           <h3>Ferramentas</h3>
           <div class="grade-ferramentas">
             <div>
               <h4>Adobe</h4>
-              <p>Photoshop, After Effects, Illustrator, Acrobat</p>
+              <div class="linhas-etiquetas">
+                <span class="etiqueta">Photoshop</span>
+                <span class="etiqueta">After Effects</span>
+                <span class="etiqueta">Illustrator</span>
+                <span class="etiqueta">Acrobat</span>
+              </div>
             </div>
             <div>
               <h4>Microsoft</h4>
-              <p>Word, Excel, PowerPoint</p>
+              <div class="linhas-etiquetas">
+                <span class="etiqueta">Word</span>
+                <span class="etiqueta">Excel</span>
+                <span class="etiqueta">PowerPoint</span>
+              </div>
             </div>
             <div>
               <h4>Web</h4>
-              <p>HTML, CSS (aprendizado em andamento)</p>
+              <div class="linhas-etiquetas">
+                <span class="etiqueta">HTML</span>
+                <span class="etiqueta">CSS</span>
+                <span class="etiqueta etiqueta-suave">aprendizado</span>
+              </div>
             </div>
           </div>
         </article>

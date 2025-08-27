@@ -73,37 +73,64 @@ body {
 .botao-menu.aberto .barra:nth-child(2) { opacity: 0; }
 .botao-menu.aberto .barra:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
 
-/* Grades & cartões de uso geral */
-.grade { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.cartao { background: var(--superficie); padding: 1rem; border-radius: var(--raio); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+/* Grades & cartões (uso geral) */
+.grade {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.cartao {
+  background: var(--superficie);
+  padding: 1rem;
+  border-radius: var(--raio);
+  box-shadow: 0 6px 20px rgba(0,0,0,.2);
+}
 
-/* === Formação: todos os cartões na mesma linha (responsivo) === */
+/* === Formação: grade elástica (auto-fit) === */
 .grade-formacao {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(4, minmax(220px, 1fr));
-}
-@media (max-width: 1100px) {
-  .grade-formacao { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
-}
-@media (max-width: 560px) {
-  .grade-formacao { grid-template-columns: 1fr; }
+  /* antes: repeat(4, ...). agora adapta: 4→3→2→1 conforme espaço */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-/* Ferramentas lado a lado dentro do cartão */
+/* Ferramentas: colunas elásticas */
 .grade-ferramentas {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Adobe | Microsoft | Web */
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
   margin-top: 1rem;
 }
-@media (max-width: 720px) {
-  .grade-ferramentas { grid-template-columns: 1fr; } /* empilha no mobile */
-}
+
+/* Título das colunas de ferramentas */
 .grade-ferramentas h4 {
-  margin-bottom: .5rem;
+  margin: 0 0 .4rem 0;
   color: var(--marca);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
+}
+
+/* Chips (etiquetas) */
+.linhas-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .6rem;
+  margin-top: .5rem;
+}
+.etiqueta {
+  display: inline-block;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  background: rgba(124, 92, 255, .14);
+  border: 1px solid rgba(124, 92, 255, .25);
+  color: var(--texto);
+  font-size: .92rem;
+  line-height: 1;
+  white-space: nowrap; /* chips não quebram por dentro */
+}
+.etiqueta-suave {
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .12);
+  color: var(--texto-suave);
 }
 
 /* Botão de ação */
@@ -135,9 +162,12 @@ body {
 /* Responsividade do menu e formulário */
 @media (max-width: 860px) {
   .menu-links { display: none; flex-direction: column; gap: .5rem; }
-  .menu-links.ativo { display: flex; position: absolute; right: 1rem; top: calc(var(--altura-cabecalho) + .25rem);
-                      background: var(--superficie); padding: .75rem; border-radius: 12px;
-                      border: 1px solid rgba(255,255,255,.1); box-shadow: 0 12px 24px rgba(0,0,0,.25); }
+  .menu-links.ativo {
+    display: flex;
+    position: absolute; right: 1rem; top: calc(var(--altura-cabecalho) + .25rem);
+    background: var(--superficie); padding: .75rem; border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.1); box-shadow: 0 12px 24px rgba(0,0,0,.25);
+  }
 }
 @media (max-width: 720px) {
   .formulario { grid-template-columns: 1fr; }
