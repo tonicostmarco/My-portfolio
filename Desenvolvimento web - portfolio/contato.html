@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marco Ricardo — Contato</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="conteiner navegacao">
+      <a class="logomarca" href="index.html"><b>Marco</b>Ricardo</a>
+
+      <ul class="menu-links" id="menu-links">
+        <li><a href="index.html">Sobre mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+      </ul>
+
+      <button class="botao-menu" id="botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
+        <span class="barra"></span><span class="barra"></span><span class="barra"></span>
+      </button>
+
+      <button id="botao-tema" class="botao-tema" aria-label="Alternar tema" title="Alternar tema">🌙</button>
+    </div>
+  </header>
+
+  <main class="conteiner">
+    <section class="secao">
+      <h1>Fale comigo</h1>
+      <form class="formulario" aria-describedby="aviso-formulario">
+        <div class="campo-formulario">
+          <label for="campo-nome">Nome</label>
+          <input id="campo-nome" name="nome" type="text" placeholder="Seu nome" required>
+        </div>
+        <div class="campo-formulario">
+          <label for="campo-email">E-mail</label>
+          <input id="campo-email" name="email" type="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="campo-formulario linha-inteira">
+          <label for="campo-mensagem">Mensagem</label>
+          <textarea id="campo-mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem…"></textarea>
+        </div>
+        <div class="acoes-formulario">
+          <button class="botao-acao" type="button" id="botao-enviar">Enviar (visual)</button>
+        </div>
+      </form>
+      <p id="aviso-formulario" class="texto-suave">*Este formulário é apenas visual.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="conteiner">© <span id="ano-atual">2025</span> • Marco A. C. Ricardo</div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
